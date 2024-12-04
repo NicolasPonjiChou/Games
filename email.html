@@ -14,24 +14,17 @@
 
     <script type="text/javascript">
         function sendEmail() {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "nicolasponji@gmail.com",
-                Password: "Htshooting28",
-                To: 'my9i888@gmail.com',
-                From: "nicolasponji@gmail.com",
-                Subject: "幸福大調查",
-                Body: "Well that was easy!!",
-                Attachments: [
-                    {
-                        name: "File_Name_with_Extension",
-                        path: "Full Path of the file"
-                    }]
-            })
-                .then(function (message) {
-                    alert("Mail has been sent successfully")
-                });
-        }
+Email.send({
+    Host : "smtp.mailslurp.com",
+    Username : "ponji@livemail.tw",
+    Password : "Htshooting28",
+    To : 'my9i888@gmail.com',
+    From : "ponji@livemail.tw",
+    Subject : "Test email",
+    Body : "<html><h2>Header</h2><strong>Bold text</strong><br/></br><em>Italic</em></html>"
+}).then(message => alert(message)
+);
+}
     </script>
 </body>
 

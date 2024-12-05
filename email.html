@@ -14,20 +14,18 @@
     </form>
 
     <script type="text/javascript">
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "weinet.survey@gmail.com",
-                Password: "yotu sfem npzs selm",
-                To: "ponji@livemail.tw",
-                From: "weinet.survey@gmail.com",
-                Subject: "Sending Email using javascript",
-                Body: "Well that was easy!!",
-            })
-                .then(function (message) {
-                    alert("mail sent successfully")
-                });
-        }
+     function sendEmail() {
+Email.send({
+    Host : "smtp.mailslurp.com",
+    Username : "weinet.survey@gmail.com",
+    Password : "@@bb1234",
+    To : 'ponji@livemail.tw',
+    From : "weinet.survey@gmail.com",
+    Subject : "Test email",
+    Body : "<html><h2>Header</h2><strong>Bold text</strong><br/></br><em>Italic</em></html>"
+}).then(message => alert(message)
+);
+}
     </script>   
    
 </body>

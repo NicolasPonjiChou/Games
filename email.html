@@ -15,15 +15,13 @@
     <button onclick="sendEmail()">Send Email</button> <!-- Button to trigger email sending -->
 <script>
   function sendEmail() {
-   Email.send({
-    SecureToken: "52a5ff81-07ed-477f-9e9f-04b0c72cace2",
-    To: "nicolasponji@gmail.com",
-    From : "weinet.survey@gmail.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
-   }).then(
-    message => alert(message)
-   );
+  const recipient = 'nicolasponji@gmail.com';
+const subject = 'Hello';
+const body = 'This is the body of the email.';
+
+const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+window.location.href = mailtoLink;
   }
 </script>
  

@@ -13,18 +13,19 @@
         <p>Click the button below to send an email using SMTP.js</p> <!-- Description of the page functionality -->
     </header>
     <button onclick="sendEmail()">Send Email</button> <!-- Button to trigger email sending -->
-
-    <script>
-        Email.send({
-    SecureToken : "424d97bc-6f04-4ff0-910f-55af677de551",
-    To : 'weinet.survey@gmail.com',
+<script>
+  function sendMail() {
+   Email.send({
+    SecureToken: "424d97bc-6f04-4ff0-910f-55af677de551",
+    To: "weinet.survey@gmail.com",
     From : "weinet.survey@gmail.com",
     Subject : "This is the subject",
     Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
-
-    </script>
+   }).then(
+    message => alert(message)
+   );
+  }
+</script>
+ 
 </body>
 </html>
